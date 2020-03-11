@@ -121,8 +121,8 @@ createStoreCard = (store) => {
     let storeName = document.createElement("p");
     let status = document.createElement("h3");
     let openingHours = document.createElement("p");
-    let closeButton = document.createElement("button");
     let favButton = document.createElement("button");
+    let closeButton = document.createElement("button");
 
     storeLi.className = "storeLi";
     storeDiv.className = "storeDiv";
@@ -131,10 +131,12 @@ createStoreCard = (store) => {
     status.textContent = "Öppetider ej tillgängliga"
     status.style.color = "red"
     openingHours.textContent = store.opening_hours[0];
-    closeButton.innerHTML = '<i class="fas fa-times"></i>'
-    closeButton.className = "closeButton"
-    favButton.innerHTML = '<i class="fas fa-heart"></i>'
+    /*     favButton.innerHTML = '<i class="fas fa-heart"></i>' */
+    favButton.textContent = "favoritmarkera"
     favButton.className = "favButton"
+    /*  closeButton.innerHTML = '<i class="fas fa-times"></i>' */
+    closeButton.textContent = "stäng"
+    closeButton.className = "closeButton"
 
     if (store.opening_hours[1]) {
         let opening = Number(store.opening_hours[0].slice(11, 13));
@@ -165,8 +167,8 @@ createStoreCard = (store) => {
     storeDiv.appendChild(storeName);
     storeDiv.appendChild(status);
     storeDiv.appendChild(openingHours);
-    storeDiv.appendChild(closeButton);
     storeDiv.appendChild(favButton);
+    storeDiv.appendChild(closeButton);
     storeLi.appendChild(storeDiv);
     target.appendChild(storeLi);
 }

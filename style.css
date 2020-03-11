@@ -87,6 +87,7 @@ nav {
     padding: 0.5em;
     background-color: #fed401;
     border: 2px solid #fed401;
+    transition: 0.3s;
 }
 
 #submit:hover {
@@ -124,15 +125,11 @@ select option {
 }
 
 .closeButton {
-    color: black;
-    background-color: transparent;
+  padding: 0.5em;
+    background-color: white;
     border: none;
+    transition: 0.3s;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.5em;
-    width: 36px;
 }
 
 .closeButton:hover {
@@ -140,15 +137,11 @@ select option {
 }
 
 .favButton {
-   color: red;
-    background-color: transparent;
+  padding: 0.5em;
+    background-color: white;
     border: none;
+    transition: 0.3s;
     cursor: pointer;
-    position: absolute;
-    top: 1em;
-    right: 0;
-    font-size: 1.5em;
-    width: 36px;
 }
 
 .favButton:hover {
@@ -178,9 +171,14 @@ select option {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#favContainer li:nth-child(odd) {background: rgba(0, 0, 0, 0.05)}
+#favContainer li:hover{
+    background: rgba(0, 0, 0, 0.05)
+}
 
 #favContainer p {
     width: fit-content;
@@ -195,8 +193,5 @@ select option {
 }
 
 .deleteButton:hover {
-    background-color: transparent;
-    -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.23);
-    -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.23);
-    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.23);
+background: rgba(0, 0, 0, 0.05)
 }
